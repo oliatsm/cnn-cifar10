@@ -1,0 +1,3 @@
+*.o
+cnn-cifar10
+Outputs.txt
