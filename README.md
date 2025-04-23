@@ -25,7 +25,8 @@ This project implements a convolutional neural network (CNN) in the C programmin
 
 ## How to Compile
 
-Each version folder contains its own `Makefile`.
+Each version folder contains its own `Makefile`. 
+Μake sure you have the NVIDIA HPC compiler (nvc) installed.
 
 Example (from the serial version):
 
