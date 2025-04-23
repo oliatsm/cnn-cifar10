@@ -28,10 +28,10 @@ This project implements a convolutional neural network (CNN) in the C programmin
 Each version folder contains its own `Makefile`. 
 Μake sure you have the NVIDIA HPC compiler (nvc) installed.
 
-Example (from the serial version):
+Example (from the parallel version):
 
 ```bash
-cd serial
+cd openacc
 make
-./cnn
+./cnn-cifar10
 ```
