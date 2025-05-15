@@ -21,7 +21,6 @@ This project implements a convolutional neural network (CNN) in the C programmin
 - `serial/` – Basic serial implementation of CNN
 - `openacc/` – GPU-accelerated version using OpenACC
 - `padding/` – Optimized version with zero-padding to simplify convolution
-- `common/` – Utility functions for memory allocation and timing
 
 ## How to Compile
 

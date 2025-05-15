@@ -1,9 +1,9 @@
 CC = nvc
-CFLAGS = -acc -Minfo=all -c11 -Wall -Wextra -march=native -I../common
+CFLAGS = -acc -Minfo=all -c11 -Wall -Wextra -march=native
 PROFILE_FLAGS = -pg
 DEBUG_FLAGS = -g
 
-SRC = main.c layers.c ../common/malloc2D.c ../common/timer.c
+SRC = main.c layers.c malloc2D.c timer.c
 OBJ = $(SRC:.c=.o)
 EXECUTABLE = cnn-cifar10
 EXECUTABLE_PROFILE = cnn-cifar10-profile
