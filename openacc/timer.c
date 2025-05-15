@@ -1,3 +1,4 @@
+#define _POSIX_C_SOURCE 199309L
 #include "timer.h"
 
 void cpu_timer_start(struct timespec *tstart_cpu)
