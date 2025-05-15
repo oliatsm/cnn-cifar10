@@ -1,5 +1,6 @@
 CC = nvc
 CFLAGS = -acc -Minfo=all -c11 -Wall -Wextra -march=native
+LDFLAGS = -lm
 PROFILE_FLAGS = -pg
 DEBUG_FLAGS = -g
 
@@ -18,13 +19,13 @@ debug: CFLAGS += $(DEBUG_FLAGS)
 debug: $(EXECUTABLE_DEBUG)
 
 $(EXECUTABLE): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 $(EXECUTABLE_PROFILE): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 $(EXECUTABLE_DEBUG): $(OBJ)
-	$(CC) $(CFLAGS) -o $@ $^
+	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)
 
 %.o: %.c
 	$(CC) $(CFLAGS) -c $< -o $@

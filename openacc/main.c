@@ -6,8 +6,8 @@
 // #include <time.h> 
 
 #include "layers.h"
-#include "../common/malloc2D.h"
-#include "../common/timer.h"
+#include "malloc2D.h"
+#include "timer.h"
 
 #define NUM_IMAGES 50000  // Number of Input Data
 #define NUM_CLASSES 10  // Number of Classes, CIFAR-10
