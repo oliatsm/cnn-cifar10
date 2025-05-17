@@ -21,6 +21,8 @@ There are three versions of the code, each in own directory:
 - `openacc/` – GPU-accelerated version using OpenACC
 - `padding/` – Optimized version with zero-padding to simplify convolution
 
+- `weights/` - Contains the pre-trained weights of the network
+
 
 ## Requirements 
 
@@ -43,6 +45,12 @@ After extracting the archive, set the dataset path in `main.c` using the `DATA_F
 const char* DATA_FOLDER = "../../cifar-10-batches-bin";
 ```
 Make sure the path points to the folder containing the binary files (data_batch_1.bin, data_batch_2.bin, etc.). You can modify the path to match your local directory structure.
+
+By default, the code uses the 50.000 images of the training dataset. You can change the number of images in `main.c`:
+
+```
+#define NUM_IMAGES 50000
+```
 
 ## Compile and Run
 
@@ -80,4 +88,51 @@ To remove all compiled files:
 
 ```
 make clean
+```
+
+## Results
+
+For 50.000 images the CNN achives 78.84 % accuracy. 
+
+Output:
+
+```
+$ ./cnn-cifar10 
+Serial Code
+CNN for 50000 images
+Loading input batch 1...
+Loading input batch 2...
+Loading input batch 3...
+Loading input batch 4...
+Loading input batch 5...
+Load Data time:0.518275 seconds
+Create Network time:0.000006 seconds
+Load Network Parameters time:0.003319 seconds
+Create Ouputs time:0.000235 seconds
+
+Net Forward total time:724.833147 seconds
+    Time for conv1: 235.903980 seconds
+    Time for relu1: 3.219701 seconds
+    Time for pool1: 3.214649 seconds
+    Time for conv2: 371.571337 seconds
+    Time for relu2: 0.921022 seconds
+    Time for pool2: 0.946631 seconds
+    Time for conv3: 108.097672 seconds
+    Time for relu3: 0.246505 seconds
+    Time for pool3: 0.248356 seconds
+    Time for fc: 0.442517 seconds
+    Time for softmax: 0.008063 seconds
+
+  Conv: 715.572989 seconds
+  ReLU: 4.387228 seconds
+  Pool: 4.409636 seconds
+  FC:   0.442517 seconds
+  Softmax: 0.008063 seconds
+
+Net Accuracy: 78.84 % 
+Net Accuracy time:0.001737 seconds
+Free memory time:0.028954 seconds
+Total time:725.385673 seconds
+END!
+
 ```
