@@ -15,7 +15,7 @@ The implementation includes a serial version and a GPU-accelerated version using
 
 ## Project Structure
 
-There are three versions of the code, each in own directory:
+There are three versions of the code, each in its own directory:
 
 - `serial/` – Basic serial implementation of CNN
 - `openacc/` – GPU-accelerated version using OpenACC
@@ -90,9 +90,9 @@ To remove all compiled files:
 make clean
 ```
 
-## Results
+## Results Example
 
-For 50.000 images the CNN achives 78.84 % accuracy. 
+For 50.000 images the CNN achieves 78.84 % accuracy. 
 
 Output:
 
