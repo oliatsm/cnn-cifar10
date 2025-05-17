@@ -1,4 +1,4 @@
-#include "layers_serial.h"
+#include "layers.h"
 
 // Creates a convolutional layer.
 // W: input Width, H: input height, D: input depth, K: filter width and height

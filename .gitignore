@@ -1,4 +1,8 @@
 *.o
 cnn-cifar10
+cnn-cifar10-profile
+cnn-cifar10-debug
+cnn-cifar10-serial
+gmon.out
 Outputs.txt
 structure.txt

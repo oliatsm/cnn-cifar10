@@ -5,7 +5,7 @@
 #include <string.h>
 // #include <time.h> 
 
-#include "layers_serial.h"
+#include "layers.h"
 #include "malloc2D.h"
 #include "timer.h"
 
