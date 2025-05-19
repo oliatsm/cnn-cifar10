@@ -1,19 +1,5 @@
 # CNN Architecture and Implementation Details
 
-## Network Architecture
-
-- Conv1: 8 filters, 5x5
-- ReLU
-- Max Pooling
-- Conv2: 16 filters, 5x5
-- ReLU
-- Max Pooling
-- Conv3: 32 filters, 5x5
-- ReLU
-- Max Pooling
-- Fully Connected Layer
-- Softmax
-
 ## Flowchart
 
 ```mermaid
@@ -50,9 +36,19 @@ The flowchart includes the following steps:
 6. **Compute predictions**: Determine the predicted class for each input image based on the output of the softmax layer.
 7. **Evaluate accuracy**: Compute the overall accuracy of the CNN by comparing the predicted classes to the ground truth labels.
 8. **Free memory**: Free the memory allocated for the CNN layers and their outputs.
-9. **End**: Terminate the program.
 
 This flowchart provides a high-level overview of the main steps involved in the code, making it easier to understand the overall logic and flow of the CNN implementation.
+
+## Network Architecture
+
+![cnn-architecture](img/image01.png)
+
+The implemented convolutional neural network consists of three convolutional layers, each followed by a pooling layer, which perform feature extraction. Classification is performed by a fully connected layer with 10 neurons, followed by a softmax function.
+
+- Every **convolution layer** have filters *5 x 5*, zero-padding *2* and step *1*. For the activation function **ReLU** is used. 
+- First convolutinal layer has 16 filters, second 20 and third 20.
+- The **pooling layers** perform max pooling on a receptive field *2 x 2* and step *2*. The size of the input image is reduced by half.
+
 
 ## Implementation Choices
 
