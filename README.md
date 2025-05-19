@@ -137,3 +137,7 @@ Total time:725.385673 seconds
 END!
 
 ```
+
+---
+
+More implementation details [here](doc/cnn-details.md)
