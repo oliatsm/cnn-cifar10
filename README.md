@@ -56,7 +56,7 @@ By default, the code uses the 50.000 images of the training dataset. You can cha
 
 Each version directory contains its own `Makefile`. 
 
-Example (from the parallel version):
+Example:
 
 ```bash
 cd openacc
@@ -86,13 +86,14 @@ make profile
 
 To remove all compiled files:
 
-```
+```bash
 make clean
 ```
 
 ## Results Example
 
 For 50.000 images the CNN achieves 78.84 % accuracy. 
+The execution time of each major part of the program is measured and printed, including data loading, network initialization, and inference (forward propagation).  
 
 Output:
 
