@@ -1,4 +1,4 @@
-# Convolutional Neural Network for CIFAR-10 in C
+# GPU-Accelerated Convolutional Neural Network in C
 
 A C-based Convolutional Neural Network (CNN) implementation to classify the CIFAR-10 dataset.
 
